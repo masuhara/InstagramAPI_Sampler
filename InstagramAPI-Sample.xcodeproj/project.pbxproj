@@ -1,437 +1,1005 @@
-// !$*UTF8*$!
-{
-	archiveVersion = 1;
-	classes = {
-	};
-	objectVersion = 46;
-	objects = {
-
-/* Begin PBXBuildFile section */
-		AF9BFC3C1A4F2CAB000B88BB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AF9BFC3B1A4F2CAB000B88BB /* main.m */; };
-		AF9BFC3F1A4F2CAB000B88BB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AF9BFC3E1A4F2CAB000B88BB /* AppDelegate.m */; };
-		AF9BFC421A4F2CAB000B88BB /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF9BFC411A4F2CAB000B88BB /* ViewController.m */; };
-		AF9BFC451A4F2CAB000B88BB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF9BFC431A4F2CAB000B88BB /* Main.storyboard */; };
-		AF9BFC471A4F2CAB000B88BB /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF9BFC461A4F2CAB000B88BB /* Images.xcassets */; };
-		AF9BFC4A1A4F2CAB000B88BB /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF9BFC481A4F2CAB000B88BB /* LaunchScreen.xib */; };
-		AF9BFC561A4F2CAB000B88BB /* InstagramAPI_SampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AF9BFC551A4F2CAB000B88BB /* InstagramAPI_SampleTests.m */; };
-		AF9BFC621A4F2EE8000B88BB /* RootTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF9BFC611A4F2EE8000B88BB /* RootTabBarViewController.m */; };
-/* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		AF9BFC501A4F2CAB000B88BB /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = AF9BFC2E1A4F2CAB000B88BB /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = AF9BFC351A4F2CAB000B88BB;
-			remoteInfo = "InstagramAPI-Sample";
-		};
-/* End PBXContainerItemProxy section */
-
-/* Begin PBXFileReference section */
-		AF9BFC361A4F2CAB000B88BB /* InstagramAPI-Sample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "InstagramAPI-Sample.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		AF9BFC3A1A4F2CAB000B88BB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		AF9BFC3B1A4F2CAB000B88BB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		AF9BFC3D1A4F2CAB000B88BB /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		AF9BFC3E1A4F2CAB000B88BB /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		AF9BFC401A4F2CAB000B88BB /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		AF9BFC411A4F2CAB000B88BB /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		AF9BFC441A4F2CAB000B88BB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		AF9BFC461A4F2CAB000B88BB /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		AF9BFC491A4F2CAB000B88BB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		AF9BFC4F1A4F2CAB000B88BB /* InstagramAPI-SampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "InstagramAPI-SampleTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		AF9BFC541A4F2CAB000B88BB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		AF9BFC551A4F2CAB000B88BB /* InstagramAPI_SampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InstagramAPI_SampleTests.m; sourceTree = "<group>"; };
-		AF9BFC5F1A4F2D3B000B88BB /* APIManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APIManager.h; sourceTree = "<group>"; };
-		AF9BFC601A4F2EE8000B88BB /* RootTabBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootTabBarViewController.h; sourceTree = "<group>"; };
-		AF9BFC611A4F2EE8000B88BB /* RootTabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootTabBarViewController.m; sourceTree = "<group>"; };
-/* End PBXFileReference section */
-
-/* Begin PBXFrameworksBuildPhase section */
-		AF9BFC331A4F2CAB000B88BB /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		AF9BFC4C1A4F2CAB000B88BB /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXFrameworksBuildPhase section */
-
-/* Begin PBXGroup section */
-		AF9BFC2D1A4F2CAB000B88BB = {
-			isa = PBXGroup;
-			children = (
-				AF9BFC381A4F2CAB000B88BB /* InstagramAPI-Sample */,
-				AF9BFC521A4F2CAB000B88BB /* InstagramAPI-SampleTests */,
-				AF9BFC371A4F2CAB000B88BB /* Products */,
-			);
-			sourceTree = "<group>";
-		};
-		AF9BFC371A4F2CAB000B88BB /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				AF9BFC361A4F2CAB000B88BB /* InstagramAPI-Sample.app */,
-				AF9BFC4F1A4F2CAB000B88BB /* InstagramAPI-SampleTests.xctest */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		AF9BFC381A4F2CAB000B88BB /* InstagramAPI-Sample */ = {
-			isa = PBXGroup;
-			children = (
-				AF9BFC3D1A4F2CAB000B88BB /* AppDelegate.h */,
-				AF9BFC3E1A4F2CAB000B88BB /* AppDelegate.m */,
-				AF9BFC5F1A4F2D3B000B88BB /* APIManager.h */,
-				AF9BFC601A4F2EE8000B88BB /* RootTabBarViewController.h */,
-				AF9BFC611A4F2EE8000B88BB /* RootTabBarViewController.m */,
-				AF9BFC401A4F2CAB000B88BB /* ViewController.h */,
-				AF9BFC411A4F2CAB000B88BB /* ViewController.m */,
-				AF9BFC431A4F2CAB000B88BB /* Main.storyboard */,
-				AF9BFC461A4F2CAB000B88BB /* Images.xcassets */,
-				AF9BFC481A4F2CAB000B88BB /* LaunchScreen.xib */,
-				AF9BFC391A4F2CAB000B88BB /* Supporting Files */,
-			);
-			path = "InstagramAPI-Sample";
-			sourceTree = "<group>";
-		};
-		AF9BFC391A4F2CAB000B88BB /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				AF9BFC3A1A4F2CAB000B88BB /* Info.plist */,
-				AF9BFC3B1A4F2CAB000B88BB /* main.m */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		AF9BFC521A4F2CAB000B88BB /* InstagramAPI-SampleTests */ = {
-			isa = PBXGroup;
-			children = (
-				AF9BFC551A4F2CAB000B88BB /* InstagramAPI_SampleTests.m */,
-				AF9BFC531A4F2CAB000B88BB /* Supporting Files */,
-			);
-			path = "InstagramAPI-SampleTests";
-			sourceTree = "<group>";
-		};
-		AF9BFC531A4F2CAB000B88BB /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				AF9BFC541A4F2CAB000B88BB /* Info.plist */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-/* End PBXGroup section */
-
-/* Begin PBXNativeTarget section */
-		AF9BFC351A4F2CAB000B88BB /* InstagramAPI-Sample */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = AF9BFC591A4F2CAB000B88BB /* Build configuration list for PBXNativeTarget "InstagramAPI-Sample" */;
-			buildPhases = (
-				AF9BFC321A4F2CAB000B88BB /* Sources */,
-				AF9BFC331A4F2CAB000B88BB /* Frameworks */,
-				AF9BFC341A4F2CAB000B88BB /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "InstagramAPI-Sample";
-			productName = "InstagramAPI-Sample";
-			productReference = AF9BFC361A4F2CAB000B88BB /* InstagramAPI-Sample.app */;
-			productType = "com.apple.product-type.application";
-		};
-		AF9BFC4E1A4F2CAB000B88BB /* InstagramAPI-SampleTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = AF9BFC5C1A4F2CAB000B88BB /* Build configuration list for PBXNativeTarget "InstagramAPI-SampleTests" */;
-			buildPhases = (
-				AF9BFC4B1A4F2CAB000B88BB /* Sources */,
-				AF9BFC4C1A4F2CAB000B88BB /* Frameworks */,
-				AF9BFC4D1A4F2CAB000B88BB /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				AF9BFC511A4F2CAB000B88BB /* PBXTargetDependency */,
-			);
-			name = "InstagramAPI-SampleTests";
-			productName = "InstagramAPI-SampleTests";
-			productReference = AF9BFC4F1A4F2CAB000B88BB /* InstagramAPI-SampleTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-/* End PBXNativeTarget section */
-
-/* Begin PBXProject section */
-		AF9BFC2E1A4F2CAB000B88BB /* Project object */ = {
-			isa = PBXProject;
-			attributes = {
-				LastUpgradeCheck = 0610;
-				ORGANIZATIONNAME = net.masuhara;
-				TargetAttributes = {
-					AF9BFC351A4F2CAB000B88BB = {
-						CreatedOnToolsVersion = 6.1;
-					};
-					AF9BFC4E1A4F2CAB000B88BB = {
-						CreatedOnToolsVersion = 6.1;
-						TestTargetID = AF9BFC351A4F2CAB000B88BB;
-					};
-				};
-			};
-			buildConfigurationList = AF9BFC311A4F2CAB000B88BB /* Build configuration list for PBXProject "InstagramAPI-Sample" */;
-			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
-			hasScannedForEncodings = 0;
-			knownRegions = (
-				en,
-				Base,
-			);
-			mainGroup = AF9BFC2D1A4F2CAB000B88BB;
-			productRefGroup = AF9BFC371A4F2CAB000B88BB /* Products */;
-			projectDirPath = "";
-			projectRoot = "";
-			targets = (
-				AF9BFC351A4F2CAB000B88BB /* InstagramAPI-Sample */,
-				AF9BFC4E1A4F2CAB000B88BB /* InstagramAPI-SampleTests */,
-			);
-		};
-/* End PBXProject section */
-
-/* Begin PBXResourcesBuildPhase section */
-		AF9BFC341A4F2CAB000B88BB /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				AF9BFC451A4F2CAB000B88BB /* Main.storyboard in Resources */,
-				AF9BFC4A1A4F2CAB000B88BB /* LaunchScreen.xib in Resources */,
-				AF9BFC471A4F2CAB000B88BB /* Images.xcassets in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		AF9BFC4D1A4F2CAB000B88BB /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXResourcesBuildPhase section */
-
-/* Begin PBXSourcesBuildPhase section */
-		AF9BFC321A4F2CAB000B88BB /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				AF9BFC621A4F2EE8000B88BB /* RootTabBarViewController.m in Sources */,
-				AF9BFC421A4F2CAB000B88BB /* ViewController.m in Sources */,
-				AF9BFC3F1A4F2CAB000B88BB /* AppDelegate.m in Sources */,
-				AF9BFC3C1A4F2CAB000B88BB /* main.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		AF9BFC4B1A4F2CAB000B88BB /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				AF9BFC561A4F2CAB000B88BB /* InstagramAPI_SampleTests.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		AF9BFC511A4F2CAB000B88BB /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = AF9BFC351A4F2CAB000B88BB /* InstagramAPI-Sample */;
-			targetProxy = AF9BFC501A4F2CAB000B88BB /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		AF9BFC431A4F2CAB000B88BB /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				AF9BFC441A4F2CAB000B88BB /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		AF9BFC481A4F2CAB000B88BB /* LaunchScreen.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				AF9BFC491A4F2CAB000B88BB /* Base */,
-			);
-			name = LaunchScreen.xib;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
-
-/* Begin XCBuildConfiguration section */
-		AF9BFC571A4F2CAB000B88BB /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				COPY_PHASE_STRIP = NO;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
-				MTL_ENABLE_DEBUG_INFO = YES;
-				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = iphoneos;
-			};
-			name = Debug;
-		};
-		AF9BFC581A4F2CAB000B88BB /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				COPY_PHASE_STRIP = YES;
-				ENABLE_NS_ASSERTIONS = NO;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				SDKROOT = iphoneos;
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		AF9BFC5A1A4F2CAB000B88BB /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = "InstagramAPI-Sample/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Debug;
-		};
-		AF9BFC5B1A4F2CAB000B88BB /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = "InstagramAPI-Sample/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Release;
-		};
-		AF9BFC5D1A4F2CAB000B88BB /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = "InstagramAPI-SampleTests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/InstagramAPI-Sample.app/InstagramAPI-Sample";
-			};
-			name = Debug;
-		};
-		AF9BFC5E1A4F2CAB000B88BB /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = "InstagramAPI-SampleTests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/InstagramAPI-Sample.app/InstagramAPI-Sample";
-			};
-			name = Release;
-		};
-/* End XCBuildConfiguration section */
-
-/* Begin XCConfigurationList section */
-		AF9BFC311A4F2CAB000B88BB /* Build configuration list for PBXProject "InstagramAPI-Sample" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				AF9BFC571A4F2CAB000B88BB /* Debug */,
-				AF9BFC581A4F2CAB000B88BB /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		AF9BFC591A4F2CAB000B88BB /* Build configuration list for PBXNativeTarget "InstagramAPI-Sample" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				AF9BFC5A1A4F2CAB000B88BB /* Debug */,
-				AF9BFC5B1A4F2CAB000B88BB /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-		};
-		AF9BFC5C1A4F2CAB000B88BB /* Build configuration list for PBXNativeTarget "InstagramAPI-SampleTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				AF9BFC5D1A4F2CAB000B88BB /* Debug */,
-				AF9BFC5E1A4F2CAB000B88BB /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-		};
-/* End XCConfigurationList section */
-	};
-	rootObject = AF9BFC2E1A4F2CAB000B88BB /* Project object */;
-}
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>archiveVersion</key>
+	<string>1</string>
+	<key>classes</key>
+	<dict/>
+	<key>objectVersion</key>
+	<string>46</string>
+	<key>objects</key>
+	<dict>
+		<key>0346DBC98A2252607F0EF3BB</key>
+		<dict>
+			<key>fileRef</key>
+			<string>4FD154464404C47666F53BA9</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>10E09A9B1D76FFE357872FCB</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.xcconfig</string>
+			<key>name</key>
+			<string>Pods-InstagramAPI-Sample.debug.xcconfig</string>
+			<key>path</key>
+			<string>Pods/Target Support Files/Pods-InstagramAPI-Sample/Pods-InstagramAPI-Sample.debug.xcconfig</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>1BAEB26E97BDE459DA243CD6</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array/>
+			<key>inputPaths</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXShellScriptBuildPhase</string>
+			<key>name</key>
+			<string>Check Pods Manifest.lock</string>
+			<key>outputPaths</key>
+			<array/>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+			<key>shellPath</key>
+			<string>/bin/sh</string>
+			<key>shellScript</key>
+			<string>diff "${PODS_ROOT}/../Podfile.lock" "${PODS_ROOT}/Manifest.lock" &gt; /dev/null
+if [[ $? != 0 ]] ; then
+    cat &lt;&lt; EOM
+error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.
+EOM
+    exit 1
+fi
+</string>
+			<key>showEnvVarsInLog</key>
+			<string>0</string>
+		</dict>
+		<key>2A3752CE8B3ACD313BB3DF78</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>10E09A9B1D76FFE357872FCB</string>
+				<string>A313B00569D4DDE493192F79</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Pods</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>4FD154464404C47666F53BA9</key>
+		<dict>
+			<key>explicitFileType</key>
+			<string>archive.ar</string>
+			<key>includeInIndex</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>path</key>
+			<string>libPods-InstagramAPI-Sample.a</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
+		</dict>
+		<key>5473B9C5F4FBBBD4787FF13D</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>4FD154464404C47666F53BA9</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Frameworks</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>A313B00569D4DDE493192F79</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.xcconfig</string>
+			<key>name</key>
+			<string>Pods-InstagramAPI-Sample.release.xcconfig</string>
+			<key>path</key>
+			<string>Pods/Target Support Files/Pods-InstagramAPI-Sample/Pods-InstagramAPI-Sample.release.xcconfig</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>A69E4C52407D6DEF71AC23A6</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array/>
+			<key>inputPaths</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXShellScriptBuildPhase</string>
+			<key>name</key>
+			<string>Copy Pods Resources</string>
+			<key>outputPaths</key>
+			<array/>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+			<key>shellPath</key>
+			<string>/bin/sh</string>
+			<key>shellScript</key>
+			<string>"${SRCROOT}/Pods/Target Support Files/Pods-InstagramAPI-Sample/Pods-InstagramAPI-Sample-resources.sh"
+</string>
+			<key>showEnvVarsInLog</key>
+			<string>0</string>
+		</dict>
+		<key>AF9BFC2D1A4F2CAB000B88BB</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>AF9BFC381A4F2CAB000B88BB</string>
+				<string>AF9BFC521A4F2CAB000B88BB</string>
+				<string>AF9BFC371A4F2CAB000B88BB</string>
+				<string>2A3752CE8B3ACD313BB3DF78</string>
+				<string>5473B9C5F4FBBBD4787FF13D</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>AF9BFC2E1A4F2CAB000B88BB</key>
+		<dict>
+			<key>attributes</key>
+			<dict>
+				<key>LastUpgradeCheck</key>
+				<string>0610</string>
+				<key>ORGANIZATIONNAME</key>
+				<string>net.masuhara</string>
+				<key>TargetAttributes</key>
+				<dict>
+					<key>AF9BFC351A4F2CAB000B88BB</key>
+					<dict>
+						<key>CreatedOnToolsVersion</key>
+						<string>6.1</string>
+					</dict>
+					<key>AF9BFC4E1A4F2CAB000B88BB</key>
+					<dict>
+						<key>CreatedOnToolsVersion</key>
+						<string>6.1</string>
+						<key>TestTargetID</key>
+						<string>AF9BFC351A4F2CAB000B88BB</string>
+					</dict>
+				</dict>
+			</dict>
+			<key>buildConfigurationList</key>
+			<string>AF9BFC311A4F2CAB000B88BB</string>
+			<key>compatibilityVersion</key>
+			<string>Xcode 3.2</string>
+			<key>developmentRegion</key>
+			<string>English</string>
+			<key>hasScannedForEncodings</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXProject</string>
+			<key>knownRegions</key>
+			<array>
+				<string>en</string>
+				<string>Base</string>
+			</array>
+			<key>mainGroup</key>
+			<string>AF9BFC2D1A4F2CAB000B88BB</string>
+			<key>productRefGroup</key>
+			<string>AF9BFC371A4F2CAB000B88BB</string>
+			<key>projectDirPath</key>
+			<string></string>
+			<key>projectReferences</key>
+			<array/>
+			<key>projectRoot</key>
+			<string></string>
+			<key>targets</key>
+			<array>
+				<string>AF9BFC351A4F2CAB000B88BB</string>
+				<string>AF9BFC4E1A4F2CAB000B88BB</string>
+			</array>
+		</dict>
+		<key>AF9BFC311A4F2CAB000B88BB</key>
+		<dict>
+			<key>buildConfigurations</key>
+			<array>
+				<string>AF9BFC571A4F2CAB000B88BB</string>
+				<string>AF9BFC581A4F2CAB000B88BB</string>
+			</array>
+			<key>defaultConfigurationIsVisible</key>
+			<string>0</string>
+			<key>defaultConfigurationName</key>
+			<string>Release</string>
+			<key>isa</key>
+			<string>XCConfigurationList</string>
+		</dict>
+		<key>AF9BFC321A4F2CAB000B88BB</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>AF9BFC621A4F2EE8000B88BB</string>
+				<string>AF9BFC421A4F2CAB000B88BB</string>
+				<string>AF9BFC3F1A4F2CAB000B88BB</string>
+				<string>AF9BFC3C1A4F2CAB000B88BB</string>
+			</array>
+			<key>isa</key>
+			<string>PBXSourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>AF9BFC331A4F2CAB000B88BB</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>0346DBC98A2252607F0EF3BB</string>
+			</array>
+			<key>isa</key>
+			<string>PBXFrameworksBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>AF9BFC341A4F2CAB000B88BB</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>AF9BFC451A4F2CAB000B88BB</string>
+				<string>AF9BFC4A1A4F2CAB000B88BB</string>
+				<string>AF9BFC471A4F2CAB000B88BB</string>
+			</array>
+			<key>isa</key>
+			<string>PBXResourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>AF9BFC351A4F2CAB000B88BB</key>
+		<dict>
+			<key>buildConfigurationList</key>
+			<string>AF9BFC591A4F2CAB000B88BB</string>
+			<key>buildPhases</key>
+			<array>
+				<string>1BAEB26E97BDE459DA243CD6</string>
+				<string>AF9BFC321A4F2CAB000B88BB</string>
+				<string>AF9BFC331A4F2CAB000B88BB</string>
+				<string>AF9BFC341A4F2CAB000B88BB</string>
+				<string>A69E4C52407D6DEF71AC23A6</string>
+			</array>
+			<key>buildRules</key>
+			<array/>
+			<key>dependencies</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXNativeTarget</string>
+			<key>name</key>
+			<string>InstagramAPI-Sample</string>
+			<key>productName</key>
+			<string>InstagramAPI-Sample</string>
+			<key>productReference</key>
+			<string>AF9BFC361A4F2CAB000B88BB</string>
+			<key>productType</key>
+			<string>com.apple.product-type.application</string>
+		</dict>
+		<key>AF9BFC361A4F2CAB000B88BB</key>
+		<dict>
+			<key>explicitFileType</key>
+			<string>wrapper.application</string>
+			<key>includeInIndex</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>path</key>
+			<string>InstagramAPI-Sample.app</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
+		</dict>
+		<key>AF9BFC371A4F2CAB000B88BB</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>AF9BFC361A4F2CAB000B88BB</string>
+				<string>AF9BFC4F1A4F2CAB000B88BB</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Products</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>AF9BFC381A4F2CAB000B88BB</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>AF9BFC3D1A4F2CAB000B88BB</string>
+				<string>AF9BFC3E1A4F2CAB000B88BB</string>
+				<string>AF9BFC5F1A4F2D3B000B88BB</string>
+				<string>AF9BFC601A4F2EE8000B88BB</string>
+				<string>AF9BFC611A4F2EE8000B88BB</string>
+				<string>AF9BFC401A4F2CAB000B88BB</string>
+				<string>AF9BFC411A4F2CAB000B88BB</string>
+				<string>AF9BFC431A4F2CAB000B88BB</string>
+				<string>AF9BFC461A4F2CAB000B88BB</string>
+				<string>AF9BFC481A4F2CAB000B88BB</string>
+				<string>AF9BFC391A4F2CAB000B88BB</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>path</key>
+			<string>InstagramAPI-Sample</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>AF9BFC391A4F2CAB000B88BB</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>AF9BFC3A1A4F2CAB000B88BB</string>
+				<string>AF9BFC3B1A4F2CAB000B88BB</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Supporting Files</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>AF9BFC3A1A4F2CAB000B88BB</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.plist.xml</string>
+			<key>path</key>
+			<string>Info.plist</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>AF9BFC3B1A4F2CAB000B88BB</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>main.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>AF9BFC3C1A4F2CAB000B88BB</key>
+		<dict>
+			<key>fileRef</key>
+			<string>AF9BFC3B1A4F2CAB000B88BB</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>AF9BFC3D1A4F2CAB000B88BB</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>AppDelegate.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>AF9BFC3E1A4F2CAB000B88BB</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>AppDelegate.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>AF9BFC3F1A4F2CAB000B88BB</key>
+		<dict>
+			<key>fileRef</key>
+			<string>AF9BFC3E1A4F2CAB000B88BB</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>AF9BFC401A4F2CAB000B88BB</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>ViewController.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>AF9BFC411A4F2CAB000B88BB</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>ViewController.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>AF9BFC421A4F2CAB000B88BB</key>
+		<dict>
+			<key>fileRef</key>
+			<string>AF9BFC411A4F2CAB000B88BB</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>AF9BFC431A4F2CAB000B88BB</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>AF9BFC441A4F2CAB000B88BB</string>
+			</array>
+			<key>isa</key>
+			<string>PBXVariantGroup</string>
+			<key>name</key>
+			<string>Main.storyboard</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>AF9BFC441A4F2CAB000B88BB</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>file.storyboard</string>
+			<key>name</key>
+			<string>Base</string>
+			<key>path</key>
+			<string>Base.lproj/Main.storyboard</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>AF9BFC451A4F2CAB000B88BB</key>
+		<dict>
+			<key>fileRef</key>
+			<string>AF9BFC431A4F2CAB000B88BB</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>AF9BFC461A4F2CAB000B88BB</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>folder.assetcatalog</string>
+			<key>path</key>
+			<string>Images.xcassets</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>AF9BFC471A4F2CAB000B88BB</key>
+		<dict>
+			<key>fileRef</key>
+			<string>AF9BFC461A4F2CAB000B88BB</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>AF9BFC481A4F2CAB000B88BB</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>AF9BFC491A4F2CAB000B88BB</string>
+			</array>
+			<key>isa</key>
+			<string>PBXVariantGroup</string>
+			<key>name</key>
+			<string>LaunchScreen.xib</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>AF9BFC491A4F2CAB000B88BB</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>file.xib</string>
+			<key>name</key>
+			<string>Base</string>
+			<key>path</key>
+			<string>Base.lproj/LaunchScreen.xib</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>AF9BFC4A1A4F2CAB000B88BB</key>
+		<dict>
+			<key>fileRef</key>
+			<string>AF9BFC481A4F2CAB000B88BB</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>AF9BFC4B1A4F2CAB000B88BB</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>AF9BFC561A4F2CAB000B88BB</string>
+			</array>
+			<key>isa</key>
+			<string>PBXSourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>AF9BFC4C1A4F2CAB000B88BB</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXFrameworksBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>AF9BFC4D1A4F2CAB000B88BB</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXResourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>AF9BFC4E1A4F2CAB000B88BB</key>
+		<dict>
+			<key>buildConfigurationList</key>
+			<string>AF9BFC5C1A4F2CAB000B88BB</string>
+			<key>buildPhases</key>
+			<array>
+				<string>AF9BFC4B1A4F2CAB000B88BB</string>
+				<string>AF9BFC4C1A4F2CAB000B88BB</string>
+				<string>AF9BFC4D1A4F2CAB000B88BB</string>
+			</array>
+			<key>buildRules</key>
+			<array/>
+			<key>dependencies</key>
+			<array>
+				<string>AF9BFC511A4F2CAB000B88BB</string>
+			</array>
+			<key>isa</key>
+			<string>PBXNativeTarget</string>
+			<key>name</key>
+			<string>InstagramAPI-SampleTests</string>
+			<key>productName</key>
+			<string>InstagramAPI-SampleTests</string>
+			<key>productReference</key>
+			<string>AF9BFC4F1A4F2CAB000B88BB</string>
+			<key>productType</key>
+			<string>com.apple.product-type.bundle.unit-test</string>
+		</dict>
+		<key>AF9BFC4F1A4F2CAB000B88BB</key>
+		<dict>
+			<key>explicitFileType</key>
+			<string>wrapper.cfbundle</string>
+			<key>includeInIndex</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>path</key>
+			<string>InstagramAPI-SampleTests.xctest</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
+		</dict>
+		<key>AF9BFC501A4F2CAB000B88BB</key>
+		<dict>
+			<key>containerPortal</key>
+			<string>AF9BFC2E1A4F2CAB000B88BB</string>
+			<key>isa</key>
+			<string>PBXContainerItemProxy</string>
+			<key>proxyType</key>
+			<string>1</string>
+			<key>remoteGlobalIDString</key>
+			<string>AF9BFC351A4F2CAB000B88BB</string>
+			<key>remoteInfo</key>
+			<string>InstagramAPI-Sample</string>
+		</dict>
+		<key>AF9BFC511A4F2CAB000B88BB</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXTargetDependency</string>
+			<key>target</key>
+			<string>AF9BFC351A4F2CAB000B88BB</string>
+			<key>targetProxy</key>
+			<string>AF9BFC501A4F2CAB000B88BB</string>
+		</dict>
+		<key>AF9BFC521A4F2CAB000B88BB</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>AF9BFC551A4F2CAB000B88BB</string>
+				<string>AF9BFC531A4F2CAB000B88BB</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>path</key>
+			<string>InstagramAPI-SampleTests</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>AF9BFC531A4F2CAB000B88BB</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>AF9BFC541A4F2CAB000B88BB</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Supporting Files</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>AF9BFC541A4F2CAB000B88BB</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.plist.xml</string>
+			<key>path</key>
+			<string>Info.plist</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>AF9BFC551A4F2CAB000B88BB</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>InstagramAPI_SampleTests.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>AF9BFC561A4F2CAB000B88BB</key>
+		<dict>
+			<key>fileRef</key>
+			<string>AF9BFC551A4F2CAB000B88BB</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>AF9BFC571A4F2CAB000B88BB</key>
+		<dict>
+			<key>buildSettings</key>
+			<dict>
+				<key>ALWAYS_SEARCH_USER_PATHS</key>
+				<string>NO</string>
+				<key>CLANG_CXX_LANGUAGE_STANDARD</key>
+				<string>gnu++0x</string>
+				<key>CLANG_CXX_LIBRARY</key>
+				<string>libc++</string>
+				<key>CLANG_ENABLE_MODULES</key>
+				<string>YES</string>
+				<key>CLANG_ENABLE_OBJC_ARC</key>
+				<string>YES</string>
+				<key>CLANG_WARN_BOOL_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_CONSTANT_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_DIRECT_OBJC_ISA_USAGE</key>
+				<string>YES_ERROR</string>
+				<key>CLANG_WARN_EMPTY_BODY</key>
+				<string>YES</string>
+				<key>CLANG_WARN_ENUM_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_INT_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_OBJC_ROOT_CLASS</key>
+				<string>YES_ERROR</string>
+				<key>CLANG_WARN_UNREACHABLE_CODE</key>
+				<string>YES</string>
+				<key>CLANG_WARN__DUPLICATE_METHOD_MATCH</key>
+				<string>YES</string>
+				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
+				<string>iPhone Developer</string>
+				<key>COPY_PHASE_STRIP</key>
+				<string>NO</string>
+				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
+				<string>YES</string>
+				<key>GCC_C_LANGUAGE_STANDARD</key>
+				<string>gnu99</string>
+				<key>GCC_DYNAMIC_NO_PIC</key>
+				<string>NO</string>
+				<key>GCC_OPTIMIZATION_LEVEL</key>
+				<string>0</string>
+				<key>GCC_PREPROCESSOR_DEFINITIONS</key>
+				<array>
+					<string>DEBUG=1</string>
+					<string>$(inherited)</string>
+				</array>
+				<key>GCC_SYMBOLS_PRIVATE_EXTERN</key>
+				<string>NO</string>
+				<key>GCC_WARN_64_TO_32_BIT_CONVERSION</key>
+				<string>YES</string>
+				<key>GCC_WARN_ABOUT_RETURN_TYPE</key>
+				<string>YES_ERROR</string>
+				<key>GCC_WARN_UNDECLARED_SELECTOR</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNINITIALIZED_AUTOS</key>
+				<string>YES_AGGRESSIVE</string>
+				<key>GCC_WARN_UNUSED_FUNCTION</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNUSED_VARIABLE</key>
+				<string>YES</string>
+				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
+				<string>8.1</string>
+				<key>MTL_ENABLE_DEBUG_INFO</key>
+				<string>YES</string>
+				<key>ONLY_ACTIVE_ARCH</key>
+				<string>YES</string>
+				<key>SDKROOT</key>
+				<string>iphoneos</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Debug</string>
+		</dict>
+		<key>AF9BFC581A4F2CAB000B88BB</key>
+		<dict>
+			<key>buildSettings</key>
+			<dict>
+				<key>ALWAYS_SEARCH_USER_PATHS</key>
+				<string>NO</string>
+				<key>CLANG_CXX_LANGUAGE_STANDARD</key>
+				<string>gnu++0x</string>
+				<key>CLANG_CXX_LIBRARY</key>
+				<string>libc++</string>
+				<key>CLANG_ENABLE_MODULES</key>
+				<string>YES</string>
+				<key>CLANG_ENABLE_OBJC_ARC</key>
+				<string>YES</string>
+				<key>CLANG_WARN_BOOL_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_CONSTANT_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_DIRECT_OBJC_ISA_USAGE</key>
+				<string>YES_ERROR</string>
+				<key>CLANG_WARN_EMPTY_BODY</key>
+				<string>YES</string>
+				<key>CLANG_WARN_ENUM_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_INT_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_OBJC_ROOT_CLASS</key>
+				<string>YES_ERROR</string>
+				<key>CLANG_WARN_UNREACHABLE_CODE</key>
+				<string>YES</string>
+				<key>CLANG_WARN__DUPLICATE_METHOD_MATCH</key>
+				<string>YES</string>
+				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
+				<string>iPhone Developer</string>
+				<key>COPY_PHASE_STRIP</key>
+				<string>YES</string>
+				<key>ENABLE_NS_ASSERTIONS</key>
+				<string>NO</string>
+				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
+				<string>YES</string>
+				<key>GCC_C_LANGUAGE_STANDARD</key>
+				<string>gnu99</string>
+				<key>GCC_WARN_64_TO_32_BIT_CONVERSION</key>
+				<string>YES</string>
+				<key>GCC_WARN_ABOUT_RETURN_TYPE</key>
+				<string>YES_ERROR</string>
+				<key>GCC_WARN_UNDECLARED_SELECTOR</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNINITIALIZED_AUTOS</key>
+				<string>YES_AGGRESSIVE</string>
+				<key>GCC_WARN_UNUSED_FUNCTION</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNUSED_VARIABLE</key>
+				<string>YES</string>
+				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
+				<string>8.1</string>
+				<key>MTL_ENABLE_DEBUG_INFO</key>
+				<string>NO</string>
+				<key>SDKROOT</key>
+				<string>iphoneos</string>
+				<key>VALIDATE_PRODUCT</key>
+				<string>YES</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Release</string>
+		</dict>
+		<key>AF9BFC591A4F2CAB000B88BB</key>
+		<dict>
+			<key>buildConfigurations</key>
+			<array>
+				<string>AF9BFC5A1A4F2CAB000B88BB</string>
+				<string>AF9BFC5B1A4F2CAB000B88BB</string>
+			</array>
+			<key>defaultConfigurationIsVisible</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>XCConfigurationList</string>
+		</dict>
+		<key>AF9BFC5A1A4F2CAB000B88BB</key>
+		<dict>
+			<key>baseConfigurationReference</key>
+			<string>10E09A9B1D76FFE357872FCB</string>
+			<key>buildSettings</key>
+			<dict>
+				<key>ASSETCATALOG_COMPILER_APPICON_NAME</key>
+				<string>AppIcon</string>
+				<key>INFOPLIST_FILE</key>
+				<string>InstagramAPI-Sample/Info.plist</string>
+				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
+				<string>7.0</string>
+				<key>LD_RUNPATH_SEARCH_PATHS</key>
+				<string>$(inherited) @executable_path/Frameworks</string>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Debug</string>
+		</dict>
+		<key>AF9BFC5B1A4F2CAB000B88BB</key>
+		<dict>
+			<key>baseConfigurationReference</key>
+			<string>A313B00569D4DDE493192F79</string>
+			<key>buildSettings</key>
+			<dict>
+				<key>ASSETCATALOG_COMPILER_APPICON_NAME</key>
+				<string>AppIcon</string>
+				<key>INFOPLIST_FILE</key>
+				<string>InstagramAPI-Sample/Info.plist</string>
+				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
+				<string>7.0</string>
+				<key>LD_RUNPATH_SEARCH_PATHS</key>
+				<string>$(inherited) @executable_path/Frameworks</string>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Release</string>
+		</dict>
+		<key>AF9BFC5C1A4F2CAB000B88BB</key>
+		<dict>
+			<key>buildConfigurations</key>
+			<array>
+				<string>AF9BFC5D1A4F2CAB000B88BB</string>
+				<string>AF9BFC5E1A4F2CAB000B88BB</string>
+			</array>
+			<key>defaultConfigurationIsVisible</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>XCConfigurationList</string>
+		</dict>
+		<key>AF9BFC5D1A4F2CAB000B88BB</key>
+		<dict>
+			<key>buildSettings</key>
+			<dict>
+				<key>BUNDLE_LOADER</key>
+				<string>$(TEST_HOST)</string>
+				<key>FRAMEWORK_SEARCH_PATHS</key>
+				<array>
+					<string>$(SDKROOT)/Developer/Library/Frameworks</string>
+					<string>$(inherited)</string>
+				</array>
+				<key>GCC_PREPROCESSOR_DEFINITIONS</key>
+				<array>
+					<string>DEBUG=1</string>
+					<string>$(inherited)</string>
+				</array>
+				<key>INFOPLIST_FILE</key>
+				<string>InstagramAPI-SampleTests/Info.plist</string>
+				<key>LD_RUNPATH_SEARCH_PATHS</key>
+				<string>$(inherited) @executable_path/Frameworks @loader_path/Frameworks</string>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+				<key>TEST_HOST</key>
+				<string>$(BUILT_PRODUCTS_DIR)/InstagramAPI-Sample.app/InstagramAPI-Sample</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Debug</string>
+		</dict>
+		<key>AF9BFC5E1A4F2CAB000B88BB</key>
+		<dict>
+			<key>buildSettings</key>
+			<dict>
+				<key>BUNDLE_LOADER</key>
+				<string>$(TEST_HOST)</string>
+				<key>FRAMEWORK_SEARCH_PATHS</key>
+				<array>
+					<string>$(SDKROOT)/Developer/Library/Frameworks</string>
+					<string>$(inherited)</string>
+				</array>
+				<key>INFOPLIST_FILE</key>
+				<string>InstagramAPI-SampleTests/Info.plist</string>
+				<key>LD_RUNPATH_SEARCH_PATHS</key>
+				<string>$(inherited) @executable_path/Frameworks @loader_path/Frameworks</string>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+				<key>TEST_HOST</key>
+				<string>$(BUILT_PRODUCTS_DIR)/InstagramAPI-Sample.app/InstagramAPI-Sample</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Release</string>
+		</dict>
+		<key>AF9BFC5F1A4F2D3B000B88BB</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>APIManager.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>AF9BFC601A4F2EE8000B88BB</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>RootTabBarViewController.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>AF9BFC611A4F2EE8000B88BB</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>RootTabBarViewController.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>AF9BFC621A4F2EE8000B88BB</key>
+		<dict>
+			<key>fileRef</key>
+			<string>AF9BFC611A4F2EE8000B88BB</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+	</dict>
+	<key>rootObject</key>
+	<string>AF9BFC2E1A4F2CAB000B88BB</string>
+</dict>
+</plist>
