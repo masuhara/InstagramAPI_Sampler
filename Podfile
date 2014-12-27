@@ -3,10 +3,7 @@
 
 target 'InstagramAPI-Sample' do
 
-pod 'SimpleAuth/Facebook'
-pod 'SimpleAuth/Twitter'
-
-platform :ios, '7.0'
+pod 'SimpleAuth/Instagram'
 pod "AFNetworking", "~> 2.0"
 
 end

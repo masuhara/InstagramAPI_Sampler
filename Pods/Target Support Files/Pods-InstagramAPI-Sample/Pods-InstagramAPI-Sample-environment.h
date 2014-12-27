@@ -60,12 +60,6 @@
 #define COCOAPODS_VERSION_MINOR_ISO8601 1
 #define COCOAPODS_VERSION_PATCH_ISO8601 1
 
-// NSData+Base64
-#define COCOAPODS_POD_AVAILABLE_NSData_Base64
-#define COCOAPODS_VERSION_MAJOR_NSData_Base64 1
-#define COCOAPODS_VERSION_MINOR_NSData_Base64 0
-#define COCOAPODS_VERSION_PATCH_NSData_Base64 0
-
 // ReactiveCocoa
 #define COCOAPODS_POD_AVAILABLE_ReactiveCocoa
 #define COCOAPODS_VERSION_MAJOR_ReactiveCocoa 2
@@ -96,27 +90,15 @@
 #define COCOAPODS_VERSION_MINOR_SimpleAuth_Core 3
 #define COCOAPODS_VERSION_PATCH_SimpleAuth_Core 6
 
-// SimpleAuth/Facebook
-#define COCOAPODS_POD_AVAILABLE_SimpleAuth_Facebook
-#define COCOAPODS_VERSION_MAJOR_SimpleAuth_Facebook 0
-#define COCOAPODS_VERSION_MINOR_SimpleAuth_Facebook 3
-#define COCOAPODS_VERSION_PATCH_SimpleAuth_Facebook 6
-
-// SimpleAuth/Twitter
-#define COCOAPODS_POD_AVAILABLE_SimpleAuth_Twitter
-#define COCOAPODS_VERSION_MAJOR_SimpleAuth_Twitter 0
-#define COCOAPODS_VERSION_MINOR_SimpleAuth_Twitter 3
-#define COCOAPODS_VERSION_PATCH_SimpleAuth_Twitter 6
+// SimpleAuth/Instagram
+#define COCOAPODS_POD_AVAILABLE_SimpleAuth_Instagram
+#define COCOAPODS_VERSION_MAJOR_SimpleAuth_Instagram 0
+#define COCOAPODS_VERSION_MINOR_SimpleAuth_Instagram 3
+#define COCOAPODS_VERSION_PATCH_SimpleAuth_Instagram 6
 
 // SimpleAuth/UI
 #define COCOAPODS_POD_AVAILABLE_SimpleAuth_UI
 #define COCOAPODS_VERSION_MAJOR_SimpleAuth_UI 0
 #define COCOAPODS_VERSION_MINOR_SimpleAuth_UI 3
 #define COCOAPODS_VERSION_PATCH_SimpleAuth_UI 6
-
-// cocoa-oauth
-#define COCOAPODS_POD_AVAILABLE_cocoa_oauth
-#define COCOAPODS_VERSION_MAJOR_cocoa_oauth 0
-#define COCOAPODS_VERSION_MINOR_cocoa_oauth 0
-#define COCOAPODS_VERSION_PATCH_cocoa_oauth 1
 
