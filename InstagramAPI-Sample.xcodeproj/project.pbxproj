@@ -14,6 +14,7 @@
 		AF9BFC471A4F2CAB000B88BB /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF9BFC461A4F2CAB000B88BB /* Images.xcassets */; };
 		AF9BFC4A1A4F2CAB000B88BB /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF9BFC481A4F2CAB000B88BB /* LaunchScreen.xib */; };
 		AF9BFC561A4F2CAB000B88BB /* InstagramAPI_SampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AF9BFC551A4F2CAB000B88BB /* InstagramAPI_SampleTests.m */; };
+		AF9BFC621A4F2EE8000B88BB /* RootTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF9BFC611A4F2EE8000B88BB /* RootTabBarViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,9 @@
 		AF9BFC4F1A4F2CAB000B88BB /* InstagramAPI-SampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "InstagramAPI-SampleTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF9BFC541A4F2CAB000B88BB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AF9BFC551A4F2CAB000B88BB /* InstagramAPI_SampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InstagramAPI_SampleTests.m; sourceTree = "<group>"; };
+		AF9BFC5F1A4F2D3B000B88BB /* APIManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APIManager.h; sourceTree = "<group>"; };
+		AF9BFC601A4F2EE8000B88BB /* RootTabBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootTabBarViewController.h; sourceTree = "<group>"; };
+		AF9BFC611A4F2EE8000B88BB /* RootTabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootTabBarViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +87,9 @@
 			children = (
 				AF9BFC3D1A4F2CAB000B88BB /* AppDelegate.h */,
 				AF9BFC3E1A4F2CAB000B88BB /* AppDelegate.m */,
+				AF9BFC5F1A4F2D3B000B88BB /* APIManager.h */,
+				AF9BFC601A4F2EE8000B88BB /* RootTabBarViewController.h */,
+				AF9BFC611A4F2EE8000B88BB /* RootTabBarViewController.m */,
 				AF9BFC401A4F2CAB000B88BB /* ViewController.h */,
 				AF9BFC411A4F2CAB000B88BB /* ViewController.m */,
 				AF9BFC431A4F2CAB000B88BB /* Main.storyboard */,
@@ -219,6 +226,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AF9BFC621A4F2EE8000B88BB /* RootTabBarViewController.m in Sources */,
 				AF9BFC421A4F2CAB000B88BB /* ViewController.m in Sources */,
 				AF9BFC3F1A4F2CAB000B88BB /* AppDelegate.m in Sources */,
 				AF9BFC3C1A4F2CAB000B88BB /* main.m in Sources */,
@@ -344,6 +352,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "InstagramAPI-Sample/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -354,6 +363,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "InstagramAPI-Sample/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
