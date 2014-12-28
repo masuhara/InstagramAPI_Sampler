@@ -16,6 +16,13 @@
 		AF9BFC4A1A4F2CAB000B88BB /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF9BFC481A4F2CAB000B88BB /* LaunchScreen.xib */; };
 		AF9BFC561A4F2CAB000B88BB /* InstagramAPI_SampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AF9BFC551A4F2CAB000B88BB /* InstagramAPI_SampleTests.m */; };
 		AF9BFC621A4F2EE8000B88BB /* RootTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF9BFC611A4F2EE8000B88BB /* RootTabBarViewController.m */; };
+		AF9BFC651A4F59A3000B88BB /* placeholder@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AF9BFC641A4F59A3000B88BB /* placeholder@2x.png */; };
+		AF9BFC711A4F5D53000B88BB /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AF9BFC6F1A4F5D53000B88BB /* Default-568h@2x.png */; };
+		AF9BFC721A4F5D53000B88BB /* Default-667h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AF9BFC701A4F5D53000B88BB /* Default-667h@2x.png */; };
+		AF9BFC741A4F5DE5000B88BB /* Default-736h@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = AF9BFC731A4F5DE5000B88BB /* Default-736h@3x.png */; };
+		AF9BFC811A4F653F000B88BB /* MyProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF9BFC801A4F653F000B88BB /* MyProfileViewController.m */; };
+		AF9BFC841A4F6DD4000B88BB /* UserDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = AF9BFC831A4F6DD4000B88BB /* UserDataManager.m */; };
+		AF9BFC881A4F7CF9000B88BB /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF9BFC871A4F7CF9000B88BB /* QuartzCore.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +55,15 @@
 		AF9BFC5F1A4F2D3B000B88BB /* APIManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APIManager.h; sourceTree = "<group>"; };
 		AF9BFC601A4F2EE8000B88BB /* RootTabBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootTabBarViewController.h; sourceTree = "<group>"; };
 		AF9BFC611A4F2EE8000B88BB /* RootTabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootTabBarViewController.m; sourceTree = "<group>"; };
+		AF9BFC641A4F59A3000B88BB /* placeholder@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "placeholder@2x.png"; sourceTree = "<group>"; };
+		AF9BFC6F1A4F5D53000B88BB /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		AF9BFC701A4F5D53000B88BB /* Default-667h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-667h@2x.png"; sourceTree = "<group>"; };
+		AF9BFC731A4F5DE5000B88BB /* Default-736h@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-736h@3x.png"; sourceTree = "<group>"; };
+		AF9BFC7F1A4F653F000B88BB /* MyProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyProfileViewController.h; sourceTree = "<group>"; };
+		AF9BFC801A4F653F000B88BB /* MyProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyProfileViewController.m; sourceTree = "<group>"; };
+		AF9BFC821A4F6DD4000B88BB /* UserDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserDataManager.h; sourceTree = "<group>"; };
+		AF9BFC831A4F6DD4000B88BB /* UserDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserDataManager.m; sourceTree = "<group>"; };
+		AF9BFC871A4F7CF9000B88BB /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +71,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AF9BFC881A4F7CF9000B88BB /* QuartzCore.framework in Frameworks */,
 				0346DBC98A2252607F0EF3BB /* libPods-InstagramAPI-Sample.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -81,6 +98,7 @@
 		5473B9C5F4FBBBD4787FF13D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				AF9BFC871A4F7CF9000B88BB /* QuartzCore.framework */,
 				4FD154464404C47666F53BA9 /* libPods-InstagramAPI-Sample.a */,
 			);
 			name = Frameworks;
@@ -109,14 +127,19 @@
 		AF9BFC381A4F2CAB000B88BB /* InstagramAPI-Sample */ = {
 			isa = PBXGroup;
 			children = (
+				AF9BFC631A4F5999000B88BB /* Images */,
 				AF9BFC3D1A4F2CAB000B88BB /* AppDelegate.h */,
 				AF9BFC3E1A4F2CAB000B88BB /* AppDelegate.m */,
 				AF9BFC5F1A4F2D3B000B88BB /* APIManager.h */,
+				AF9BFC821A4F6DD4000B88BB /* UserDataManager.h */,
+				AF9BFC831A4F6DD4000B88BB /* UserDataManager.m */,
 				AF9BFC601A4F2EE8000B88BB /* RootTabBarViewController.h */,
 				AF9BFC611A4F2EE8000B88BB /* RootTabBarViewController.m */,
 				AF9BFC401A4F2CAB000B88BB /* ViewController.h */,
 				AF9BFC411A4F2CAB000B88BB /* ViewController.m */,
-				AF9BFC431A4F2CAB000B88BB /* Main.storyboard */,
+				AF9BFC7F1A4F653F000B88BB /* MyProfileViewController.h */,
+				AF9BFC801A4F653F000B88BB /* MyProfileViewController.m */,
+				AF9BFC781A4F5FF1000B88BB /* Storyboards */,
 				AF9BFC461A4F2CAB000B88BB /* Images.xcassets */,
 				AF9BFC481A4F2CAB000B88BB /* LaunchScreen.xib */,
 				AF9BFC391A4F2CAB000B88BB /* Supporting Files */,
@@ -148,6 +171,33 @@
 				AF9BFC541A4F2CAB000B88BB /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		AF9BFC631A4F5999000B88BB /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				AF9BFC6E1A4F5D53000B88BB /* Defaults */,
+				AF9BFC641A4F59A3000B88BB /* placeholder@2x.png */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
+		AF9BFC6E1A4F5D53000B88BB /* Defaults */ = {
+			isa = PBXGroup;
+			children = (
+				AF9BFC6F1A4F5D53000B88BB /* Default-568h@2x.png */,
+				AF9BFC731A4F5DE5000B88BB /* Default-736h@3x.png */,
+				AF9BFC701A4F5D53000B88BB /* Default-667h@2x.png */,
+			);
+			path = Defaults;
+			sourceTree = "<group>";
+		};
+		AF9BFC781A4F5FF1000B88BB /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				AF9BFC431A4F2CAB000B88BB /* Main.storyboard */,
+			);
+			name = Storyboards;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -234,8 +284,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				AF9BFC451A4F2CAB000B88BB /* Main.storyboard in Resources */,
+				AF9BFC721A4F5D53000B88BB /* Default-667h@2x.png in Resources */,
 				AF9BFC4A1A4F2CAB000B88BB /* LaunchScreen.xib in Resources */,
+				AF9BFC651A4F59A3000B88BB /* placeholder@2x.png in Resources */,
+				AF9BFC711A4F5D53000B88BB /* Default-568h@2x.png in Resources */,
 				AF9BFC471A4F2CAB000B88BB /* Images.xcassets in Resources */,
+				AF9BFC741A4F5DE5000B88BB /* Default-736h@3x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -286,8 +340,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AF9BFC841A4F6DD4000B88BB /* UserDataManager.m in Sources */,
 				AF9BFC621A4F2EE8000B88BB /* RootTabBarViewController.m in Sources */,
 				AF9BFC421A4F2CAB000B88BB /* ViewController.m in Sources */,
+				AF9BFC811A4F653F000B88BB /* MyProfileViewController.m in Sources */,
 				AF9BFC3F1A4F2CAB000B88BB /* AppDelegate.m in Sources */,
 				AF9BFC3C1A4F2CAB000B88BB /* main.m in Sources */,
 			);
