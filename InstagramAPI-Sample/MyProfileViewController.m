@@ -182,7 +182,6 @@
 - (IBAction)logOut
 {
     //TODO:ログアウト処理
-    /*
      AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
     [manager GET:@"https://instagram.com/accounts/logout" parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
         
@@ -193,7 +192,6 @@
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         NSLog(@"Error: %@", error);
     }];
-     */
 }
 
 @end
