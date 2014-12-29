@@ -8,9 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		0346DBC98A2252607F0EF3BB /* libPods-InstagramAPI-Sample.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FD154464404C47666F53BA9 /* libPods-InstagramAPI-Sample.a */; };
+		AF689AAF1A51EA86009A2FEF /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF689AAE1A51EA86009A2FEF /* HomeViewController.m */; };
+		AF689AB21A51ED98009A2FEF /* TrendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF689AB11A51ED98009A2FEF /* TrendViewController.m */; };
 		AF9BFC3C1A4F2CAB000B88BB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AF9BFC3B1A4F2CAB000B88BB /* main.m */; };
 		AF9BFC3F1A4F2CAB000B88BB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AF9BFC3E1A4F2CAB000B88BB /* AppDelegate.m */; };
-		AF9BFC421A4F2CAB000B88BB /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF9BFC411A4F2CAB000B88BB /* ViewController.m */; };
 		AF9BFC451A4F2CAB000B88BB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF9BFC431A4F2CAB000B88BB /* Main.storyboard */; };
 		AF9BFC471A4F2CAB000B88BB /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF9BFC461A4F2CAB000B88BB /* Images.xcassets */; };
 		AF9BFC4A1A4F2CAB000B88BB /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF9BFC481A4F2CAB000B88BB /* LaunchScreen.xib */; };
@@ -23,6 +24,20 @@
 		AF9BFC811A4F653F000B88BB /* MyProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF9BFC801A4F653F000B88BB /* MyProfileViewController.m */; };
 		AF9BFC841A4F6DD4000B88BB /* UserDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = AF9BFC831A4F6DD4000B88BB /* UserDataManager.m */; };
 		AF9BFC881A4F7CF9000B88BB /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF9BFC871A4F7CF9000B88BB /* QuartzCore.framework */; };
+		AFB7439E1A51D5CB009FFAB2 /* CameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFB7439D1A51D5CB009FFAB2 /* CameraViewController.m */; };
+		AFB743A01A51D5E6009FFAB2 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFB7439F1A51D5E6009FFAB2 /* AVFoundation.framework */; };
+		AFB743A21A51D5EF009FFAB2 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFB743A11A51D5EF009FFAB2 /* ImageIO.framework */; };
+		AFB743A41A51D5F8009FFAB2 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFB743A31A51D5F8009FFAB2 /* AudioToolbox.framework */; };
+		AFB743B01A51E365009FFAB2 /* home-50@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AFB743A61A51E365009FFAB2 /* home-50@2x.png */; };
+		AFB743B11A51E365009FFAB2 /* home_filled-50@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AFB743A71A51E365009FFAB2 /* home_filled-50@2x.png */; };
+		AFB743B21A51E365009FFAB2 /* integrated_webcam-50@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AFB743A81A51E365009FFAB2 /* integrated_webcam-50@2x.png */; };
+		AFB743B31A51E365009FFAB2 /* integrated_webcam_filled-50@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AFB743A91A51E365009FFAB2 /* integrated_webcam_filled-50@2x.png */; };
+		AFB743B41A51E365009FFAB2 /* photo-50.png in Resources */ = {isa = PBXBuildFile; fileRef = AFB743AA1A51E365009FFAB2 /* photo-50.png */; };
+		AFB743B51A51E365009FFAB2 /* search-50@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AFB743AB1A51E365009FFAB2 /* search-50@2x.png */; };
+		AFB743B61A51E365009FFAB2 /* speech_bubble-50@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AFB743AC1A51E365009FFAB2 /* speech_bubble-50@2x.png */; };
+		AFB743B71A51E365009FFAB2 /* speech_bubble_filled-50@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AFB743AD1A51E365009FFAB2 /* speech_bubble_filled-50@2x.png */; };
+		AFB743B81A51E365009FFAB2 /* user_male_2-50@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AFB743AE1A51E365009FFAB2 /* user_male_2-50@2x.png */; };
+		AFB743B91A51E365009FFAB2 /* user_male_4-50@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AFB743AF1A51E365009FFAB2 /* user_male_4-50@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,13 +54,15 @@
 		10E09A9B1D76FFE357872FCB /* Pods-InstagramAPI-Sample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InstagramAPI-Sample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-InstagramAPI-Sample/Pods-InstagramAPI-Sample.debug.xcconfig"; sourceTree = "<group>"; };
 		4FD154464404C47666F53BA9 /* libPods-InstagramAPI-Sample.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-InstagramAPI-Sample.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A313B00569D4DDE493192F79 /* Pods-InstagramAPI-Sample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InstagramAPI-Sample.release.xcconfig"; path = "Pods/Target Support Files/Pods-InstagramAPI-Sample/Pods-InstagramAPI-Sample.release.xcconfig"; sourceTree = "<group>"; };
+		AF689AAD1A51EA86009A2FEF /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
+		AF689AAE1A51EA86009A2FEF /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
+		AF689AB01A51ED98009A2FEF /* TrendViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TrendViewController.h; sourceTree = "<group>"; };
+		AF689AB11A51ED98009A2FEF /* TrendViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TrendViewController.m; sourceTree = "<group>"; };
 		AF9BFC361A4F2CAB000B88BB /* InstagramAPI-Sample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "InstagramAPI-Sample.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF9BFC3A1A4F2CAB000B88BB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AF9BFC3B1A4F2CAB000B88BB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		AF9BFC3D1A4F2CAB000B88BB /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		AF9BFC3E1A4F2CAB000B88BB /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		AF9BFC401A4F2CAB000B88BB /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		AF9BFC411A4F2CAB000B88BB /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		AF9BFC441A4F2CAB000B88BB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AF9BFC461A4F2CAB000B88BB /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		AF9BFC491A4F2CAB000B88BB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -64,6 +81,21 @@
 		AF9BFC821A4F6DD4000B88BB /* UserDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserDataManager.h; sourceTree = "<group>"; };
 		AF9BFC831A4F6DD4000B88BB /* UserDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserDataManager.m; sourceTree = "<group>"; };
 		AF9BFC871A4F7CF9000B88BB /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		AFB7439C1A51D5CB009FFAB2 /* CameraViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CameraViewController.h; sourceTree = "<group>"; };
+		AFB7439D1A51D5CB009FFAB2 /* CameraViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CameraViewController.m; sourceTree = "<group>"; };
+		AFB7439F1A51D5E6009FFAB2 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		AFB743A11A51D5EF009FFAB2 /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
+		AFB743A31A51D5F8009FFAB2 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		AFB743A61A51E365009FFAB2 /* home-50@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "home-50@2x.png"; sourceTree = "<group>"; };
+		AFB743A71A51E365009FFAB2 /* home_filled-50@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "home_filled-50@2x.png"; sourceTree = "<group>"; };
+		AFB743A81A51E365009FFAB2 /* integrated_webcam-50@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "integrated_webcam-50@2x.png"; sourceTree = "<group>"; };
+		AFB743A91A51E365009FFAB2 /* integrated_webcam_filled-50@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "integrated_webcam_filled-50@2x.png"; sourceTree = "<group>"; };
+		AFB743AA1A51E365009FFAB2 /* photo-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "photo-50.png"; sourceTree = "<group>"; };
+		AFB743AB1A51E365009FFAB2 /* search-50@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "search-50@2x.png"; sourceTree = "<group>"; };
+		AFB743AC1A51E365009FFAB2 /* speech_bubble-50@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "speech_bubble-50@2x.png"; sourceTree = "<group>"; };
+		AFB743AD1A51E365009FFAB2 /* speech_bubble_filled-50@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "speech_bubble_filled-50@2x.png"; sourceTree = "<group>"; };
+		AFB743AE1A51E365009FFAB2 /* user_male_2-50@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "user_male_2-50@2x.png"; sourceTree = "<group>"; };
+		AFB743AF1A51E365009FFAB2 /* user_male_4-50@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "user_male_4-50@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +103,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AFB743A41A51D5F8009FFAB2 /* AudioToolbox.framework in Frameworks */,
+				AFB743A21A51D5EF009FFAB2 /* ImageIO.framework in Frameworks */,
+				AFB743A01A51D5E6009FFAB2 /* AVFoundation.framework in Frameworks */,
 				AF9BFC881A4F7CF9000B88BB /* QuartzCore.framework in Frameworks */,
 				0346DBC98A2252607F0EF3BB /* libPods-InstagramAPI-Sample.a in Frameworks */,
 			);
@@ -98,6 +133,9 @@
 		5473B9C5F4FBBBD4787FF13D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				AFB743A31A51D5F8009FFAB2 /* AudioToolbox.framework */,
+				AFB743A11A51D5EF009FFAB2 /* ImageIO.framework */,
+				AFB7439F1A51D5E6009FFAB2 /* AVFoundation.framework */,
 				AF9BFC871A4F7CF9000B88BB /* QuartzCore.framework */,
 				4FD154464404C47666F53BA9 /* libPods-InstagramAPI-Sample.a */,
 			);
@@ -135,8 +173,12 @@
 				AF9BFC831A4F6DD4000B88BB /* UserDataManager.m */,
 				AF9BFC601A4F2EE8000B88BB /* RootTabBarViewController.h */,
 				AF9BFC611A4F2EE8000B88BB /* RootTabBarViewController.m */,
-				AF9BFC401A4F2CAB000B88BB /* ViewController.h */,
-				AF9BFC411A4F2CAB000B88BB /* ViewController.m */,
+				AF689AAD1A51EA86009A2FEF /* HomeViewController.h */,
+				AF689AAE1A51EA86009A2FEF /* HomeViewController.m */,
+				AF689AB01A51ED98009A2FEF /* TrendViewController.h */,
+				AF689AB11A51ED98009A2FEF /* TrendViewController.m */,
+				AFB7439C1A51D5CB009FFAB2 /* CameraViewController.h */,
+				AFB7439D1A51D5CB009FFAB2 /* CameraViewController.m */,
 				AF9BFC7F1A4F653F000B88BB /* MyProfileViewController.h */,
 				AF9BFC801A4F653F000B88BB /* MyProfileViewController.m */,
 				AF9BFC781A4F5FF1000B88BB /* Storyboards */,
@@ -176,6 +218,7 @@
 		AF9BFC631A4F5999000B88BB /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				AFB743A51A51E365009FFAB2 /* TabbarIcons */,
 				AF9BFC6E1A4F5D53000B88BB /* Defaults */,
 				AF9BFC641A4F59A3000B88BB /* placeholder@2x.png */,
 			);
@@ -198,6 +241,23 @@
 				AF9BFC431A4F2CAB000B88BB /* Main.storyboard */,
 			);
 			name = Storyboards;
+			sourceTree = "<group>";
+		};
+		AFB743A51A51E365009FFAB2 /* TabbarIcons */ = {
+			isa = PBXGroup;
+			children = (
+				AFB743A61A51E365009FFAB2 /* home-50@2x.png */,
+				AFB743A71A51E365009FFAB2 /* home_filled-50@2x.png */,
+				AFB743A81A51E365009FFAB2 /* integrated_webcam-50@2x.png */,
+				AFB743A91A51E365009FFAB2 /* integrated_webcam_filled-50@2x.png */,
+				AFB743AA1A51E365009FFAB2 /* photo-50.png */,
+				AFB743AB1A51E365009FFAB2 /* search-50@2x.png */,
+				AFB743AC1A51E365009FFAB2 /* speech_bubble-50@2x.png */,
+				AFB743AD1A51E365009FFAB2 /* speech_bubble_filled-50@2x.png */,
+				AFB743AE1A51E365009FFAB2 /* user_male_2-50@2x.png */,
+				AFB743AF1A51E365009FFAB2 /* user_male_4-50@2x.png */,
+			);
+			path = TabbarIcons;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -285,11 +345,21 @@
 			files = (
 				AF9BFC451A4F2CAB000B88BB /* Main.storyboard in Resources */,
 				AF9BFC721A4F5D53000B88BB /* Default-667h@2x.png in Resources */,
+				AFB743B81A51E365009FFAB2 /* user_male_2-50@2x.png in Resources */,
 				AF9BFC4A1A4F2CAB000B88BB /* LaunchScreen.xib in Resources */,
 				AF9BFC651A4F59A3000B88BB /* placeholder@2x.png in Resources */,
 				AF9BFC711A4F5D53000B88BB /* Default-568h@2x.png in Resources */,
+				AFB743B11A51E365009FFAB2 /* home_filled-50@2x.png in Resources */,
 				AF9BFC471A4F2CAB000B88BB /* Images.xcassets in Resources */,
+				AFB743B01A51E365009FFAB2 /* home-50@2x.png in Resources */,
+				AFB743B51A51E365009FFAB2 /* search-50@2x.png in Resources */,
+				AFB743B71A51E365009FFAB2 /* speech_bubble_filled-50@2x.png in Resources */,
+				AFB743B61A51E365009FFAB2 /* speech_bubble-50@2x.png in Resources */,
+				AFB743B31A51E365009FFAB2 /* integrated_webcam_filled-50@2x.png in Resources */,
 				AF9BFC741A4F5DE5000B88BB /* Default-736h@3x.png in Resources */,
+				AFB743B21A51E365009FFAB2 /* integrated_webcam-50@2x.png in Resources */,
+				AFB743B41A51E365009FFAB2 /* photo-50.png in Resources */,
+				AFB743B91A51E365009FFAB2 /* user_male_4-50@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -342,10 +412,12 @@
 			files = (
 				AF9BFC841A4F6DD4000B88BB /* UserDataManager.m in Sources */,
 				AF9BFC621A4F2EE8000B88BB /* RootTabBarViewController.m in Sources */,
-				AF9BFC421A4F2CAB000B88BB /* ViewController.m in Sources */,
+				AF689AB21A51ED98009A2FEF /* TrendViewController.m in Sources */,
 				AF9BFC811A4F653F000B88BB /* MyProfileViewController.m in Sources */,
 				AF9BFC3F1A4F2CAB000B88BB /* AppDelegate.m in Sources */,
+				AFB7439E1A51D5CB009FFAB2 /* CameraViewController.m in Sources */,
 				AF9BFC3C1A4F2CAB000B88BB /* main.m in Sources */,
+				AF689AAF1A51EA86009A2FEF /* HomeViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

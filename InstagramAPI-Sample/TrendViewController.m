@@ -1,12 +1,12 @@
 //
-//  ViewController.m
+//  TrendViewController.m
 //  InstagramAPI-Sample
 //
-//  Created by Master on 2014/12/28.
+//  Created by Master on 2014/12/30.
 //  Copyright (c) 2014年 net.masuhara. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "TrendViewController.h"
 #import "APIManager.h"
 #import "UserDataManager.h"
 
@@ -17,8 +17,7 @@
 
 #define NUMBER_OF_PHOTOS @"48"
 
-
-@interface ViewController ()
+@interface TrendViewController ()
 <UICollectionViewDataSource, UICollectionViewDelegate>
 {
     NSArray *photoURLArray;
@@ -27,7 +26,7 @@
 
 @end
 
-@implementation ViewController
+@implementation TrendViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -51,12 +50,22 @@
 
 - (void)showInstagramPhotos {
     
-    if (self.instagramToken) {
+    if (![SVProgressHUD isVisible]) {
+        [SVProgressHUD showWithStatus:@"読み込み中..." maskType:SVProgressHUDMaskTypeBlack];
+    }
+    
+    
+    if ([UserDataManager sharedManager].token) {
         AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
         
-        [manager GET:@"https://api.instagram.com/v1/media/popular" parameters:@{@"access_token":self.instagramToken, @"count":NUMBER_OF_PHOTOS} success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        [manager GET:@"https://api.instagram.com/v1/media/popular" parameters:@{@"access_token":[UserDataManager sharedManager].token, @"count":NUMBER_OF_PHOTOS} success:^(AFHTTPRequestOperation *operation, id responseObject) {
             
             photoURLArray = [responseObject valueForKeyPath:@"data.images.thumbnail.url"];
+            
+            if ([SVProgressHUD isVisible]) {
+                [SVProgressHUD dismiss];
+            }
+            
             [popularCollectionView reloadData];
             
         } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
@@ -71,11 +80,8 @@
 
 - (void)loginWithInstagram{
     [SimpleAuth authorize:@"instagram" completion:^(id responseObject, NSError *error) {
-        self.instagramToken = [responseObject valueForKeyPath:@"credentials.token"];
-        [self showInstagramPhotos];
-        
-        [UserDataManager sharedManager].token = self.instagramToken;
-         [UserDataManager sharedManager].userName = [responseObject valueForKeyPath:@"extra.raw_info.data.username"];
+        [UserDataManager sharedManager].token = [responseObject valueForKeyPath:@"credentials.token"];
+        [UserDataManager sharedManager].userName = [responseObject valueForKeyPath:@"extra.raw_info.data.username"];
         [UserDataManager sharedManager].fullName = [responseObject valueForKeyPath:@"extra.raw_info.data.full_name"];
         [UserDataManager sharedManager].userID = [responseObject valueForKeyPath:@"extra.raw_info.data.id"];
         [UserDataManager sharedManager].profileImageURL = [responseObject valueForKeyPath:@"extra.raw_info.data.profile_picture"];
@@ -83,6 +89,8 @@
         [UserDataManager sharedManager].followed = [responseObject valueForKeyPath:@"extra.raw_info.data.counts.followed_by"];
         [UserDataManager sharedManager].following = [responseObject valueForKeyPath:@"extra.raw_info.data.counts.follows"];
         [UserDataManager sharedManager].numberOfPosts = [responseObject valueForKeyPath:@"extra.raw_info.data.counts.media"];
+        
+        [self showInstagramPhotos];
     }];
 }
 
@@ -110,25 +118,25 @@
     UIImageView *photoImageView = (UIImageView *)[cell viewWithTag:1];
     
     [photoImageView sd_setImageWithURL:photoURLArray[indexPath.row]
-                        placeholderImage:[UIImage imageNamed:@"placeholder@2x.png"]
-                                 options:SDWebImageCacheMemoryOnly
-                               completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
-                                   
-                                   UIApplication *application = [UIApplication sharedApplication];
-                                   application.networkActivityIndicatorVisible = NO;
-                                   
-                                   if (cacheType != SDImageCacheTypeMemory) {
-                                       
-                                       //Fade Animation
-                                       [UIView transitionWithView:photoImageView
-                                                         duration:0.3f
-                                                          options:UIViewAnimationOptionTransitionCrossDissolve
-                                                       animations:^{
-                                                           photoImageView.image = image;
-                                                       } completion:nil];
-                                       
-                                   }
-                               }];
+                      placeholderImage:[UIImage imageNamed:@"placeholder@2x.png"]
+                               options:SDWebImageCacheMemoryOnly
+                             completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
+                                 
+                                 UIApplication *application = [UIApplication sharedApplication];
+                                 application.networkActivityIndicatorVisible = NO;
+                                 
+                                 if (cacheType != SDImageCacheTypeMemory) {
+                                     
+                                     //Fade Animation
+                                     [UIView transitionWithView:photoImageView
+                                                       duration:0.3f
+                                                        options:UIViewAnimationOptionTransitionCrossDissolve
+                                                     animations:^{
+                                                         photoImageView.image = image;
+                                                     } completion:nil];
+                                     
+                                 }
+                             }];
     
     return cell;
 }
@@ -138,7 +146,6 @@
 {
     NSLog(@"tapped cell is == %d-%d",(int)indexPath.section, (int)indexPath.row);
 }
-
 
 
 @end

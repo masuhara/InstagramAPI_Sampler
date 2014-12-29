@@ -11,6 +11,8 @@
 #import "UserDataManager.h"
 
 #import "AFNetworking.h"
+#import "SVProgressHUD.h"
+#import "MBProgressHUD.h"
 #import <SDWebImage/UIImageView+WebCache.h>
 #import <SimpleAuth.h>
 #import <QuartzCore/QuartzCore.h>
@@ -76,12 +78,12 @@
                                  }
                              }];
     
-    //TODO:JSONで返ってくる数値をそのままStringとしてブチ込むとLengthエラーになるので直す。
-    //numberOfPostsLabel.text = [UserDataManager sharedManager].numberOfPosts;
-    //numberOfFollowedLabel.text = [UserDataManager sharedManager].followed;
-    //numerrOfFollowingLabel.text = [UserDataManager sharedManager].following;
+    numberOfPostsLabel.text = [NSString stringWithFormat:@"%@",[UserDataManager sharedManager].numberOfPosts];
+    numberOfFollowedLabel.text = [NSString stringWithFormat:@"%@",[UserDataManager sharedManager].followed];
+    numerrOfFollowingLabel.text = [NSString stringWithFormat:@"%@",[UserDataManager sharedManager].following];
     userNameLabel.text = [UserDataManager sharedManager].fullName;
     userDescriptionLabel.text = [UserDataManager sharedManager].bio;
+    
     [self showMyPhotos];
 }
 
@@ -93,11 +95,17 @@
 #pragma mark - InstagramAPI
 
 - (void)showMyPhotos{
+    
+    [MBProgressHUD showHUDAddedTo:myPhotoCollectionView animated:YES];
+    
     if ([UserDataManager sharedManager].token) {
         AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
         
         [manager GET:@"https://api.instagram.com/v1/media/popular" parameters:@{@"access_token":[UserDataManager sharedManager].token, @"count":NUMBER_OF_PHOTOS} success:^(AFHTTPRequestOperation *operation, id responseObject) {
             photoURLArray = [responseObject valueForKeyPath:@"data.images.thumbnail.url"];
+            
+            [MBProgressHUD hideAllHUDsForView:myPhotoCollectionView animated:YES];
+            
             [myPhotoCollectionView reloadData];
             
         } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
@@ -112,8 +120,6 @@
 - (void)loginWithInstagram{
     [SimpleAuth authorize:@"instagram" completion:^(id responseObject, NSError *error) {
         [UserDataManager sharedManager].token = [responseObject valueForKeyPath:@"credentials.token"];
-        [self showMyPhotos];
-        
         [UserDataManager sharedManager].userName = [responseObject valueForKeyPath:@"extra.raw_info.data.username"];
         [UserDataManager sharedManager].userName = [responseObject valueForKeyPath:@"extra.raw_info.data.full_name"];
         [UserDataManager sharedManager].userID = [responseObject valueForKeyPath:@"extra.raw_info.data.id"];
@@ -122,6 +128,9 @@
         [UserDataManager sharedManager].followed = [responseObject valueForKeyPath:@"extra.raw_info.data.counts.followed_by"];
         [UserDataManager sharedManager].following = [responseObject valueForKeyPath:@"extra.raw_info.data.counts.follows"];
         [UserDataManager sharedManager].numberOfPosts = [responseObject valueForKeyPath:@"extra.raw_info.data.counts.media"];
+        
+        [self setUpViews];
+        [self showMyPhotos];
     }];
 }
 
@@ -192,7 +201,6 @@
     }
     
     SimpleAuth.configuration[@"instagram"] = @{@"client_id":CLIENT_ID, SimpleAuthRedirectURIKey:REDIRECT_URI};
-    
     [self loginWithInstagram];
 }
 
