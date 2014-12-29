@@ -41,11 +41,13 @@ PODS:
     - SimpleAuth/UI
   - SimpleAuth/UI (0.3.6):
     - SimpleAuth/Core
+  - SVProgressHUD (HEAD based on 1.1.2)
 
 DEPENDENCIES:
   - AFNetworking (~> 2.0)
   - SDWebImage (~> 3.6)
   - SimpleAuth/Instagram
+  - SVProgressHUD (HEAD)
 
 SPEC CHECKSUMS:
   AFNetworking: 0f54cb5d16ce38c1b76948faffb8d5fb705021c7
@@ -54,5 +56,6 @@ SPEC CHECKSUMS:
   ReactiveCocoa: 8418a82b67af2f1b7587baf29c329040a23c2063
   SDWebImage: 116e88633b5b416ea0ca4b334a4ac59cf72dd38d
   SimpleAuth: 0664e22bff27c7f5b169254b421b1c761d002f65
+  SVProgressHUD: da7a49e789af645d9279ffbca62318945a832438
 
 COCOAPODS: 0.35.0

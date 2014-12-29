@@ -28,12 +28,13 @@
         UINavigationController *navigation = [[UINavigationController alloc] initWithRootViewController:controller];
         navigation.modalPresentationStyle = UIModalPresentationFormSheet;
         UIViewController *presented = [UIViewController SimpleAuth_presentedViewController];
-        [presented presentViewController:navigation animated:YES completion:nil];
+        [presented presentViewController:navigation animated:NO completion:nil];
     };
     
     // Default dismiss block
     SimpleAuthInterfaceHandler dismissBlock = ^(id controller) {
-        [controller dismissViewControllerAnimated:YES completion:nil];
+        
+        [controller dismissViewControllerAnimated:NO completion:nil];
     };
     
     NSMutableDictionary *options = [NSMutableDictionary dictionaryWithDictionary:[super defaultOptions]];

@@ -6,5 +6,6 @@ target 'InstagramAPI-Sample' do
 pod 'SimpleAuth/Instagram'
 pod "AFNetworking", "~> 2.0"
 pod 'SDWebImage', '~>3.6'
+pod 'SVProgressHUD', :head
 
 end

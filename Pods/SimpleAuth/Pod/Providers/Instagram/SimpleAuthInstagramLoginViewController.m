@@ -7,6 +7,7 @@
 //
 
 #import "SimpleAuthInstagramLoginViewController.h"
+#import "SVProgressHUD.h"
 
 @implementation SimpleAuthInstagramLoginViewController
 
@@ -15,6 +16,9 @@
 - (instancetype)initWithOptions:(NSDictionary *)options requestToken:(NSDictionary *)requestToken {
     if ((self = [super initWithOptions:options requestToken:requestToken])) {
         self.title = @"Instagram";
+        if ([SVProgressHUD isVisible]) {
+            [SVProgressHUD dismiss];
+        }
     }
     return self;
 }

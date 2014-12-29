@@ -13,6 +13,7 @@
 #import "AFNetworking.h"
 #import <SDWebImage/UIImageView+WebCache.h>
 #import <SimpleAuth.h>
+#import "SVProgressHUD.h"
 
 #define NUMBER_OF_PHOTOS @"48"
 
@@ -34,7 +35,6 @@
     popularCollectionView.dataSource = self;
     popularCollectionView.delegate = self;
     
-    
     SimpleAuth.configuration[@"instagram"] = @{@"client_id":CLIENT_ID, SimpleAuthRedirectURIKey:REDIRECT_URI};
     
     [self showInstagramPhotos];
@@ -50,15 +50,19 @@
 #pragma mark - InstagramAPI
 
 - (void)showInstagramPhotos {
+    
     if (self.instagramToken) {
         AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+        
         [manager GET:@"https://api.instagram.com/v1/media/popular" parameters:@{@"access_token":self.instagramToken, @"count":NUMBER_OF_PHOTOS} success:^(AFHTTPRequestOperation *operation, id responseObject) {
+            
             photoURLArray = [responseObject valueForKeyPath:@"data.images.thumbnail.url"];
             [popularCollectionView reloadData];
             
         } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
             NSLog(@"Error: %@", error);
         }];
+        
     } else {
         [self loginWithInstagram];
     }

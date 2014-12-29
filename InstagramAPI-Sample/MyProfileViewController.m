@@ -181,17 +181,31 @@
 
 - (IBAction)logOut
 {
-    //TODO:ログアウト処理
-     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
-    [manager GET:@"https://instagram.com/accounts/logout" parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
-        
-        NSLog(@"%@", responseObject);
-        [UserDataManager sharedManager].token = nil;
-        [self loginWithInstagram];
-        
-    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-        NSLog(@"Error: %@", error);
-    }];
+    [self invalidateSession];
+    
+    NSURL *url = [NSURL URLWithString:@"https://instagram.com/"];
+    NSHTTPCookieStorage *cookieStorage = [NSHTTPCookieStorage sharedHTTPCookieStorage];
+    NSEnumerator *enumerator = [[cookieStorage cookiesForURL:url] objectEnumerator];
+    NSHTTPCookie *cookie = nil;
+    while ((cookie = [enumerator nextObject])) {
+        [cookieStorage deleteCookie:cookie];
+    }
+    
+    SimpleAuth.configuration[@"instagram"] = @{@"client_id":CLIENT_ID, SimpleAuthRedirectURIKey:REDIRECT_URI};
+    
+    [self loginWithInstagram];
+}
+
+
+-(void)invalidateSession {
+    [UserDataManager sharedManager].token = nil;
+    
+    NSHTTPCookieStorage *cookies = [NSHTTPCookieStorage sharedHTTPCookieStorage];
+    NSArray *instagramCookies = [cookies cookiesForURL:[NSURL URLWithString:@"https://instagram.com/"]];
+    
+    for (NSHTTPCookie* cookie in instagramCookies) {
+        [cookies deleteCookie:cookie];
+    }
 }
 
 @end
