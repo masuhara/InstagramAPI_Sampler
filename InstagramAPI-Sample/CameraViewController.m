@@ -83,6 +83,7 @@
     imageBuffer = [UIImage imageWithCGImage:cgImage];
     CGColorSpaceRelease(colorSpace);
     CGDataProviderRelease(dataProviderRef);
+    
     // AVCaptureSession
     captureSession = [[AVCaptureSession alloc] init];
     AVCaptureDevice *captureDevice;
@@ -93,6 +94,7 @@
     [captureSession beginConfiguration];
     captureSession.sessionPreset = AVCaptureSessionPreset640x480;
     [captureSession commitConfiguration];
+    
     // output
     videoOutput = [[AVCaptureVideoDataOutput alloc]init];
     videoOutput.videoSettings = @{(id)kCVPixelBufferPixelFormatTypeKey: @(kCVPixelFormatType_32BGRA)};

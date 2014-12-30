@@ -230,36 +230,24 @@
     UITouch *touch = [touches anyObject];
     CGPoint currentTouchPosition = [touch locationInView:homeTableView];
     NSIndexPath *indexPath = [homeTableView indexPathForRowAtPoint: currentTouchPosition];
-    if (indexPath != nil) {
-        NSLog(@"indexPath");
-    }
     
     if ([UserDataManager sharedManager].token) {
-        AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
-        manager.requestSerializer = [AFJSONRequestSerializer serializer];
-        
-        NSString *mediaID = [NSString stringWithFormat:@"https://api.instagram.com/v1/media/%@/likes", idArray[indexPath.row]];
 
-        //MARK:POST Like
-        [manager POST:mediaID parameters:@{@"access_token":[UserDataManager sharedManager].token} success:^(AFHTTPRequestOperation *operation, id responseObject) {
-            
+        /* For Using POST/DELETE API, You have to prepare IP Adress|Hashed-Client Secret */
+        NSString *param = @"200.15.1.1|7e3c45bc34f56fd8e762ee4590a53c8c2bbce27e967a85484712e5faa0191688";
+#warning This Paramater is a Sample param. You must change here, when you use.
+        
+        AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+        manager.requestSerializer = [AFHTTPRequestSerializer serializer];
+        [manager.requestSerializer setValue:param forHTTPHeaderField:@"X-Insta-Forwarded-For"];
+        NSString *mediaID = [NSString stringWithFormat:@"https://api.instagram.com/v1/media/%@/likes", idArray[indexPath.row]];
+        
+        [manager POST:mediaID parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
             NSLog(@"%@", responseObject);
             
         } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
             NSLog(@"Error: %@", error.description);
         }];
-        
-        
-        //MARK:DELETE Like
-        /*
-        [manager DELETE:mediaID parameters:@{@"access_token":[UserDataManager sharedManager].token} success:^(AFHTTPRequestOperation *operation, id responseObject) {
-            
-            NSLog(@"%@", responseObject);
-            
-        } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-            NSLog(@"Error: %@", error);
-        }];
-         */
         
     } else {
         [self loginWithInstagram];
