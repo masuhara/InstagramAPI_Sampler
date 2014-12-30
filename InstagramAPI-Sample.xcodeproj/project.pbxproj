@@ -185,9 +185,9 @@
 			isa = PBXGroup;
 			children = (
 				AF9BFC631A4F5999000B88BB /* Images */,
+				AF9BFC5F1A4F2D3B000B88BB /* APIManager.h */,
 				AF9BFC3D1A4F2CAB000B88BB /* AppDelegate.h */,
 				AF9BFC3E1A4F2CAB000B88BB /* AppDelegate.m */,
-				AF9BFC5F1A4F2D3B000B88BB /* APIManager.h */,
 				AF9BFC821A4F6DD4000B88BB /* UserDataManager.h */,
 				AF9BFC831A4F6DD4000B88BB /* UserDataManager.m */,
 				AF9BFC601A4F2EE8000B88BB /* RootTabBarViewController.h */,
@@ -237,10 +237,10 @@
 		AF9BFC631A4F5999000B88BB /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				AF9BFC641A4F59A3000B88BB /* placeholder@2x.png */,
 				AF689AB31A52B48C009A2FEF /* CameraImage */,
 				AFB743A51A51E365009FFAB2 /* TabbarIcons */,
 				AF9BFC6E1A4F5D53000B88BB /* Defaults */,
-				AF9BFC641A4F59A3000B88BB /* placeholder@2x.png */,
 			);
 			path = Images;
 			sourceTree = "<group>";
