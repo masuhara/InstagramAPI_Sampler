@@ -48,6 +48,18 @@
     [self showInstagramPhotos];
 }
 
+- (void)viewWillAppear:(BOOL)animated
+{
+    if (self.tabBarController.tabBar.hidden == YES) {
+        self.tabBarController.tabBar.hidden = NO;
+    }
+}
+
+
+
+
+
+
 - (void)showInstagramPhotos {
     
     if (![SVProgressHUD isVisible]) {
@@ -59,10 +71,6 @@
         AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
         
         [manager GET:@"https://api.instagram.com/v1/users/self/feed" parameters:@{@"access_token":[UserDataManager sharedManager].token, @"count":NUMBER_OF_PHOTOS} success:^(AFHTTPRequestOperation *operation, id responseObject) {
-            
-            //NSLog(@"%@", responseObject);
-            
-            NSLog(@"token == %@",[UserDataManager sharedManager].token);
             
             allObjects = [responseObject valueForKey:@"data"];
             
@@ -198,7 +206,7 @@
     
     //MARK:Like Button
     UIButton *likeButton = (UIButton *)[cell viewWithTag:6];
-    [likeButton addTarget:self action:@selector(postLike:) forControlEvents:UIControlEventTouchUpInside];
+    [likeButton addTarget:self action:@selector(postLike:event:) forControlEvents:UIControlEventTouchUpInside];
     
     return cell;
 }
@@ -216,27 +224,29 @@
 
 #pragma mark - Like
 
-- (void)postLike:(UIButton *)sender
+- (void)postLike:(UIButton *)button event:(id)event
 {
-    UIButton *likeButton = (UIButton *)sender;
-    UITableViewCell *cell = (UITableViewCell *)[likeButton superview];
-    int row = (int)[homeTableView indexPathForCell:cell].row;
+    NSSet *touches = [event allTouches];
+    UITouch *touch = [touches anyObject];
+    CGPoint currentTouchPosition = [touch locationInView:homeTableView];
+    NSIndexPath *indexPath = [homeTableView indexPathForRowAtPoint: currentTouchPosition];
+    if (indexPath != nil) {
+        NSLog(@"indexPath");
+    }
     
     if ([UserDataManager sharedManager].token) {
         AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
         manager.requestSerializer = [AFJSONRequestSerializer serializer];
         
-        NSString *mediaID = [NSString stringWithFormat:@"https://api.instagram.com/v1/media/%@/likes", idArray[row]];
-        
-        NSLog(@"mediaID == %@", mediaID);
-        
+        NSString *mediaID = [NSString stringWithFormat:@"https://api.instagram.com/v1/media/%@/likes", idArray[indexPath.row]];
+
         //MARK:POST Like
         [manager POST:mediaID parameters:@{@"access_token":[UserDataManager sharedManager].token} success:^(AFHTTPRequestOperation *operation, id responseObject) {
             
             NSLog(@"%@", responseObject);
             
         } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-            NSLog(@"Error: %@", error);
+            NSLog(@"Error: %@", error.description);
         }];
         
         
@@ -255,5 +265,8 @@
         [self loginWithInstagram];
     }
 }
+
+
+
 
 @end

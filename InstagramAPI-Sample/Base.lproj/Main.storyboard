@@ -64,8 +64,9 @@
         <!--Camera-->
         <scene sceneID="Lh7-LU-9uF">
             <objects>
-                <navigationController id="v9h-QB-eUQ" sceneMemberID="viewController">
+                <navigationController navigationBarHidden="YES" id="v9h-QB-eUQ" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Camera" image="integrated_webcam-50.png" id="B0v-G1-t8b"/>
+                    <nil key="simulatedTopBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="MiX-Vv-6fh">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>

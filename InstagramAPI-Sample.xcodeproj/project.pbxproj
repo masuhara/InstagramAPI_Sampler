@@ -10,6 +10,10 @@
 		0346DBC98A2252607F0EF3BB /* libPods-InstagramAPI-Sample.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FD154464404C47666F53BA9 /* libPods-InstagramAPI-Sample.a */; };
 		AF689AAF1A51EA86009A2FEF /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF689AAE1A51EA86009A2FEF /* HomeViewController.m */; };
 		AF689AB21A51ED98009A2FEF /* TrendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF689AB11A51ED98009A2FEF /* TrendViewController.m */; };
+		AF689AB91A52B48C009A2FEF /* shutter@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AF689AB61A52B48C009A2FEF /* shutter@2x.png */; };
+		AF689ABB1A52B5C4009A2FEF /* flash@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AF689ABA1A52B5C4009A2FEF /* flash@2x.png */; };
+		AF689ABD1A52B6A1009A2FEF /* front@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AF689ABC1A52B6A1009A2FEF /* front@2x.png */; };
+		AF689ABF1A52BAB7009A2FEF /* dismissButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AF689ABE1A52BAB7009A2FEF /* dismissButton@2x.png */; };
 		AF9BFC3C1A4F2CAB000B88BB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AF9BFC3B1A4F2CAB000B88BB /* main.m */; };
 		AF9BFC3F1A4F2CAB000B88BB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AF9BFC3E1A4F2CAB000B88BB /* AppDelegate.m */; };
 		AF9BFC451A4F2CAB000B88BB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF9BFC431A4F2CAB000B88BB /* Main.storyboard */; };
@@ -58,6 +62,10 @@
 		AF689AAE1A51EA86009A2FEF /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
 		AF689AB01A51ED98009A2FEF /* TrendViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TrendViewController.h; sourceTree = "<group>"; };
 		AF689AB11A51ED98009A2FEF /* TrendViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TrendViewController.m; sourceTree = "<group>"; };
+		AF689AB61A52B48C009A2FEF /* shutter@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "shutter@2x.png"; sourceTree = "<group>"; };
+		AF689ABA1A52B5C4009A2FEF /* flash@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "flash@2x.png"; sourceTree = "<group>"; };
+		AF689ABC1A52B6A1009A2FEF /* front@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "front@2x.png"; sourceTree = "<group>"; };
+		AF689ABE1A52BAB7009A2FEF /* dismissButton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dismissButton@2x.png"; sourceTree = "<group>"; };
 		AF9BFC361A4F2CAB000B88BB /* InstagramAPI-Sample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "InstagramAPI-Sample.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF9BFC3A1A4F2CAB000B88BB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AF9BFC3B1A4F2CAB000B88BB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -142,6 +150,17 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		AF689AB31A52B48C009A2FEF /* CameraImage */ = {
+			isa = PBXGroup;
+			children = (
+				AF689ABE1A52BAB7009A2FEF /* dismissButton@2x.png */,
+				AF689ABC1A52B6A1009A2FEF /* front@2x.png */,
+				AF689AB61A52B48C009A2FEF /* shutter@2x.png */,
+				AF689ABA1A52B5C4009A2FEF /* flash@2x.png */,
+			);
+			path = CameraImage;
+			sourceTree = "<group>";
+		};
 		AF9BFC2D1A4F2CAB000B88BB = {
 			isa = PBXGroup;
 			children = (
@@ -218,6 +237,7 @@
 		AF9BFC631A4F5999000B88BB /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				AF689AB31A52B48C009A2FEF /* CameraImage */,
 				AFB743A51A51E365009FFAB2 /* TabbarIcons */,
 				AF9BFC6E1A4F5D53000B88BB /* Defaults */,
 				AF9BFC641A4F59A3000B88BB /* placeholder@2x.png */,
@@ -349,15 +369,19 @@
 				AF9BFC4A1A4F2CAB000B88BB /* LaunchScreen.xib in Resources */,
 				AF9BFC651A4F59A3000B88BB /* placeholder@2x.png in Resources */,
 				AF9BFC711A4F5D53000B88BB /* Default-568h@2x.png in Resources */,
+				AF689ABD1A52B6A1009A2FEF /* front@2x.png in Resources */,
+				AF689ABB1A52B5C4009A2FEF /* flash@2x.png in Resources */,
 				AFB743B11A51E365009FFAB2 /* home_filled-50@2x.png in Resources */,
 				AF9BFC471A4F2CAB000B88BB /* Images.xcassets in Resources */,
 				AFB743B01A51E365009FFAB2 /* home-50@2x.png in Resources */,
 				AFB743B51A51E365009FFAB2 /* search-50@2x.png in Resources */,
 				AFB743B71A51E365009FFAB2 /* speech_bubble_filled-50@2x.png in Resources */,
 				AFB743B61A51E365009FFAB2 /* speech_bubble-50@2x.png in Resources */,
+				AF689AB91A52B48C009A2FEF /* shutter@2x.png in Resources */,
 				AFB743B31A51E365009FFAB2 /* integrated_webcam_filled-50@2x.png in Resources */,
 				AF9BFC741A4F5DE5000B88BB /* Default-736h@3x.png in Resources */,
 				AFB743B21A51E365009FFAB2 /* integrated_webcam-50@2x.png in Resources */,
+				AF689ABF1A52BAB7009A2FEF /* dismissButton@2x.png in Resources */,
 				AFB743B41A51E365009FFAB2 /* photo-50.png in Resources */,
 				AFB743B91A51E365009FFAB2 /* user_male_4-50@2x.png in Resources */,
 			);

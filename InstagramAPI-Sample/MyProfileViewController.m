@@ -17,7 +17,7 @@
 #import <SimpleAuth.h>
 #import <QuartzCore/QuartzCore.h>
 
-#define NUMBER_OF_PHOTOS @"48"
+#define NUMBER_OF_PHOTOS @"20"
 
 
 @interface MyProfileViewController ()
@@ -101,7 +101,7 @@
     if ([UserDataManager sharedManager].token) {
         AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
         
-        [manager GET:@"https://api.instagram.com/v1/media/popular" parameters:@{@"access_token":[UserDataManager sharedManager].token, @"count":NUMBER_OF_PHOTOS} success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        [manager GET:@"https://api.instagram.com/v1/users/self/media/recent/" parameters:@{@"access_token":[UserDataManager sharedManager].token, @"count":NUMBER_OF_PHOTOS} success:^(AFHTTPRequestOperation *operation, id responseObject) {
             photoURLArray = [responseObject valueForKeyPath:@"data.images.thumbnail.url"];
             
             [MBProgressHUD hideAllHUDsForView:myPhotoCollectionView animated:YES];

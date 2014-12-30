@@ -33,6 +33,7 @@
     UIButton *shutterButton;
     UIButton *frontButton;
     UIButton *flashButton;
+    UIButton *dismissButton;
     
     // label
     UILabel *flashLabel;
@@ -56,6 +57,7 @@
     isFrontMode=NO;
     isProcessing=NO;
     isRequireTakePhoto=NO;
+    
     // imageBuffer
     size_t width = 640;//self.view.frame.size.width;
     size_t height = 480;//self.view.frame.size.height;
@@ -141,11 +143,19 @@
     [buttonContainer addSubview:flashButton];
     
     frontButton=[UIButton buttonWithType:UIButtonTypeCustom];
-    [frontButton setFrame:CGRectMake(0,0,26,26)];
+    [frontButton setFrame:CGRectMake(0,0,45,26)];
     [frontButton setCenter:CGPointMake(buttonContainer.frame.size.width*0.9,buttonContainer.frame.size.height*0.40)];
     [frontButton setImage:[UIImage imageNamed:@"front.png"] forState:UIControlStateNormal];
     [frontButton addTarget:self action:@selector(frontButtonTouchUpInside:) forControlEvents:UIControlEventTouchUpInside];
     [buttonContainer addSubview:frontButton];
+    
+    dismissButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    [dismissButton setFrame:CGRectMake(0, 0, 20, 20)];
+    [dismissButton setCenter:CGPointMake(self.view.frame.origin.x + 30, self.view.frame.origin.y + 40)];
+    [dismissButton setImage:[UIImage imageNamed:@"dismissButton.png"] forState:UIControlStateNormal];
+    [dismissButton addTarget:self action:@selector(dismissCamera) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:dismissButton];
+    
     
     //label
     flashLabel=[[UILabel alloc]initWithFrame:CGRectMake(0,0,30,20)];
@@ -156,6 +166,17 @@
     [flashLabel setTextColor:[UIColor whiteColor]];
     [buttonContainer addSubview:flashLabel];
 }
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    if (self.tabBarController.tabBar.hidden == NO) {
+        self.tabBarController.tabBar.hidden = YES;
+    }
+}
+
+
+
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -340,6 +361,14 @@ didOutputSampleBuffer:(CMSampleBufferRef)sampleBuffer
     }
 }
 
+
+
+#pragma mark - Dismiss
+
+- (void)dismissCamera
+{
+    self.tabBarController.selectedIndex = 0;
+}
 
 
 @end
