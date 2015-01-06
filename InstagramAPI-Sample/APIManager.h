@@ -9,7 +9,7 @@
 #ifndef InstagramAPI_Sample_APIManager_h
 #define InstagramAPI_Sample_APIManager_h
 
-/* ここ自分で変えてね */
+/* ここ自分で変えてね(悪用厳禁♡) */
 #define CLIENT_ID @"8972df7100654ab9aa245ac67231a9d6"
 #define CLIENT_SECRET @"8c2867dff81e4efd839d62fdc3b3137e"
 #define REDIRECT_URI @"scheme://api_sampler"
