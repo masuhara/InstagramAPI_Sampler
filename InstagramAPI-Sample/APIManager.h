@@ -14,5 +14,4 @@
 #define CLIENT_SECRET @"8c2867dff81e4efd839d62fdc3b3137e"
 #define REDIRECT_URI @"scheme://api_sampler"
 
-
 #endif
